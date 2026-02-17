@@ -1,0 +1,26 @@
+variable "aws_region" { type = string }
+variable "vpc_cidr" { type = string }
+variable "public_subnets" { type = list(string) }
+variable "private_subnets" { type = list(string) }
+variable "database_subnets" { type = list(string) }
+variable "cluster_version" { type = string }
+variable "critical_instance_types" { type = list(string) }
+variable "critical_min_size" { type = number }
+variable "critical_max_size" { type = number }
+variable "critical_desired_size" { type = number }
+variable "general_instance_types" { type = list(string) }
+variable "general_capacity_type" { type = string }
+variable "general_min_size" { type = number }
+variable "general_max_size" { type = number }
+variable "general_desired_size" { type = number }
+
+variable "db_name" { type = string }
+variable "db_username" { type = string }
+variable "db_port" { type = number }
+variable "db_engine_version" { type = string }
+variable "db_instance_class" { type = string }
+variable "db_allocated_storage" { type = number }
+variable "db_max_allocated_storage" { type = number }
+variable "db_backup_retention_days" { type = number }
+variable "create_read_replica" { type = bool }
+variable "replica_instance_class" { type = string }

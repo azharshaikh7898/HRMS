@@ -1,0 +1,30 @@
+aws_region = "ap-south-1"
+
+vpc_cidr         = "10.20.0.0/16"
+public_subnets   = ["10.20.0.0/24", "10.20.1.0/24", "10.20.2.0/24"]
+private_subnets  = ["10.20.10.0/24", "10.20.11.0/24", "10.20.12.0/24"]
+database_subnets = ["10.20.20.0/24", "10.20.21.0/24", "10.20.22.0/24"]
+
+cluster_version = "1.30"
+
+critical_instance_types = ["m7g.large"]
+critical_min_size       = 2
+critical_max_size       = 6
+critical_desired_size   = 3
+
+general_instance_types = ["m7g.large"]
+general_capacity_type  = "ON_DEMAND"
+general_min_size       = 1
+general_max_size       = 6
+general_desired_size   = 2
+
+db_name                 = "hrms"
+db_username             = "hrms_admin"
+db_port                 = 5432
+db_engine_version       = "16.3"
+db_instance_class       = "db.m7g.large"
+db_allocated_storage    = 100
+db_max_allocated_storage = 1000
+db_backup_retention_days = 35
+create_read_replica      = false
+replica_instance_class   = "db.m7g.large"
