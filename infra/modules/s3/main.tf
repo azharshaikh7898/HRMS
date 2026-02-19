@@ -50,6 +50,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "lifecycle" {
     id     = "tiering"
     status = "Enabled"
 
+    filter {}
+
     transition {
       days          = var.transition_to_ia_days
       storage_class = "STANDARD_IA"
