@@ -1,0 +1,12 @@
+# Terraform local working directories
+infra/environments/*/.terraform/
+
+# Terraform local variable files (can contain secrets)
+infra/environments/*/terraform.tfvars
+
+# Terraform state files
+infra/environments/*/*.tfstate
+infra/environments/*/*.tfstate.*
+
+# Terraform lock file (environment-local in this repo)
+infra/environments/*/.terraform.lock.hcl
